@@ -228,7 +228,7 @@ export default function App() {
 
           <div className="mx-auto max-w-xs">
             <PulseButton onClick={scrollToOffer} className="py-4 text-lg">
-              Quero Comer Sem Medo
+              Quero comer sem medo
             </PulseButton>
           </div>
         </div>
@@ -310,7 +310,7 @@ export default function App() {
             {[
               { 
                 step: '1', 
-                title: 'Siga um Cardápio Já Pronto', 
+                title: 'Siga um cardápio já pronto', 
                 desc: 'Tenha acesso a um plano completo com receitas para cada dia do ano, todas sem açúcar e sem glúten. Você não precisa pensar no que preparar!' 
               },
               { 
@@ -344,12 +344,12 @@ export default function App() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: <Zap size={20} />, title: 'Controle de Açúcar', desc: 'Melhore seus níveis de açúcar no sangue e reduza o risco de diabetes.' },
-              { icon: <Heart size={20} />, title: 'Liberdade Alimentar', desc: 'Saboreie pratos irresistíveis sem culpa, criando uma relação positiva com a comida.' },
-              { icon: <Utensils size={20} />, title: 'Variedade Diária', desc: 'Com 365 receitas, você tem uma nova opção todos os dias.' },
-              { icon: <Clock size={20} />, title: 'Praticidade na Cozinha', desc: 'Prepare refeições deliciosas em 30 minutos ou menos, economizando tempo.' },
-              { icon: <BookOpen size={20} />, title: 'Educação Nutricional', desc: 'Aprenda a fazer escolhas alimentares conscientes e desenvolva hábitos saudáveis.' },
-              { icon: <Star size={20} />, title: 'Controle de Peso', desc: 'Mantenha um peso saudável de forma sustentável, com receitas que saciam.' }
+              { icon: <Zap size={20} />, title: 'Controle de açúcar', desc: 'Melhore seus níveis de açúcar no sangue e reduza o risco de diabetes.' },
+              { icon: <Heart size={20} />, title: 'Liberdade alimentar', desc: 'Saboreie pratos irresistíveis sem culpa, criando uma relação positiva com a comida.' },
+              { icon: <Utensils size={20} />, title: 'Variedade diária', desc: 'Com 365 receitas, você tem uma nova opção todos os dias.' },
+              { icon: <Clock size={20} />, title: 'Praticidade na cozinha', desc: 'Prepare refeições deliciosas em 30 minutos ou menos, economizando tempo.' },
+              { icon: <BookOpen size={20} />, title: 'Educação nutricional', desc: 'Aprenda a fazer escolhas alimentares conscientes e desenvolva hábitos saudáveis.' },
+              { icon: <Star size={20} />, title: 'Controle de peso', desc: 'Mantenha um peso saudável de forma sustentável, com receitas que saciam.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 rounded-2xl bg-vanilla/20 p-5 transition-all hover:bg-vanilla/40">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-caramel shadow-sm">
@@ -429,13 +429,13 @@ export default function App() {
       {/* Target Audience Section */}
       <section className="bg-vanilla px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-6 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">As Delícias do Bem é para você se:</h2>
+          <h2 className="mb-6 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">As Delícias do Bem são para você se:</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { title: 'Pessoas com Restrições Alimentares', desc: 'Indivíduos que precisam evitar açúcar e glúten por questões de saúde, como diabetes e intolerâncias.' },
-              { title: 'Famílias Saudáveis', desc: 'Pais que buscam oferecer uma alimentação nutritiva e saborosa para seus filhos, promovendo hábitos saudáveis desde cedo.' },
-              { title: 'Adeptos de Estilos de Vida Saudáveis', desc: 'Pessoas que seguem dietas como low carb, paleo ou veganas e desejam receitas que se encaixem nessas abordagens.' },
-              { title: 'Busca de Controle de Peso', desc: 'Pessoas que desejam perder ou manter o peso, precisando de receitas que sejam satisfatórias, mas que ajudem a controlar as calorias.' }
+              { title: 'Pessoas com restrições alimentares', desc: 'Indivíduos que precisam evitar açúcar e glúten por questões de saúde, como diabetes e intolerâncias.' },
+              { title: 'Famílias saudáveis', desc: 'Pais que buscam oferecer uma alimentação nutritiva e saborosa para seus filhos, promovendo hábitos saudáveis desde cedo.' },
+              { title: 'Adeptos de estilos de vida saudáveis', desc: 'Pessoas que seguem dietas como low carb, paleo ou veganas e desejam receitas que se encaixem nessas abordagens.' },
+              { title: 'Busca de controle de peso', desc: 'Pessoas que desejam perder ou manter o peso, precisando de receitas que sejam satisfatórias, mas que ajudem a controlar as calorias.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3 py-2">
                 <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-caramel/10 text-caramel">
@@ -479,9 +479,9 @@ export default function App() {
               {[
                 'Bônus: Receitas de Chás',
                 'Bônus: Sucos Detox',
-                'Receitas Doces Zero',
-                'Receitas de Molhos e Pates',
-                'Receitas Sopas e Cremes',
+                'Receitas de Doces Zero',
+                'Receitas de Molhos e Patês',
+                'Receitas de Sopas e Cremes',
                 'Receitas de Farinhas sem Glúten',
                 'Receitas de Pães'
               ].map((text, i) => (
@@ -496,8 +496,8 @@ export default function App() {
           </div>
 
           <div className="mt-6">
-            <p className="text-lg text-dark-chocolate/60">Tudo o que você vai receber somam mais de <span className="font-bold text-bright-red line-through">R$ 99,90</span></p>
-            <p className="mt-2 text-xl font-bold text-dark-chocolate">Mas hoje você não irá pagar esse valor... embora vale cada centavo.</p>
+            <p className="text-lg text-dark-chocolate/60">Tudo o que você vai receber soma mais de <span className="font-bold text-bright-red line-through">R$ 99,90</span></p>
+            <p className="mt-2 text-xl font-bold text-dark-chocolate">Mas hoje você não irá pagar esse valor... embora valha cada centavo.</p>
           </div>
         </div>
       </section>
@@ -523,9 +523,9 @@ export default function App() {
                   '+365 Receitas Zero Açúcar e sem Glúten',
                   'Bônus: Receitas de Chás',
                   'Bônus: Sucos Detox',
-                  'Receitas Doces Zero',
-                  'Receitas de Molhos e Pates',
-                  'Receitas Sopas e Cremes',
+                  'Receitas de Doces Zero',
+                  'Receitas de Molhos e Patês',
+                  'Receitas de Sopas e Cremes',
                   'Receitas de Farinhas sem Glúten',
                   'Receitas de Pães'
                 ].map((text, i) => (
