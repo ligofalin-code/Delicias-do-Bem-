@@ -54,8 +54,9 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
   );
 };
 
-const PulseButton = ({ children, className = "" }: { children: ReactNode, className?: string }) => (
+const PulseButton = ({ children, className = "", onClick }: { children: ReactNode, className?: string, onClick?: () => void }) => (
   <motion.button
+    onClick={onClick}
     animate={{ 
       scale: [1, 1.03, 1],
       boxShadow: [
@@ -176,6 +177,10 @@ const TestimonialCarousel = () => {
 };
 
 export default function App() {
+  const scrollToOffer = () => {
+    document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen font-sans">
       <CountdownTimer />
@@ -222,7 +227,7 @@ export default function App() {
           </div>
 
           <div className="mx-auto max-w-xs">
-            <PulseButton className="py-4 text-lg">
+            <PulseButton onClick={scrollToOffer} className="py-4 text-lg">
               Quero Comer Sem Medo
             </PulseButton>
           </div>
@@ -290,7 +295,7 @@ export default function App() {
                 Finalmente, Uma Solução <span className="text-caramel">Simples e Eficaz</span> para transformar a Sua Alimentação.
               </h2>
               <p className="mb-4 text-sm text-dark-chocolate/70">Apenas 3 passos são suficientes para a transformação.</p>
-              <PulseButton className="px-6 text-base">
+              <PulseButton onClick={scrollToOffer} className="px-6 text-base">
                 QUERO UMA VIDA MAIS SAUDÁVEL
               </PulseButton>
             </div>
@@ -444,7 +449,7 @@ export default function App() {
             ))}
           </div>
           <div className="mt-6 text-center">
-            <PulseButton className="max-w-xs px-8">
+            <PulseButton onClick={scrollToOffer} className="max-w-xs px-8">
               QUERO COMEÇAR AGORA
             </PulseButton>
           </div>
@@ -498,7 +503,7 @@ export default function App() {
       </section>
 
       {/* Offer Section */}
-      <section className="bg-vanilla px-4 py-4 md:py-6">
+      <section id="oferta" className="bg-vanilla px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-center shadow-xl md:p-10">
           <h2 className="mb-4 text-2xl font-bold text-strawberry md:text-4xl">OFERTA POR TEMPO LIMITADO!</h2>
           
@@ -599,7 +604,7 @@ export default function App() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <PulseButton className="max-w-xs px-8">
+            <PulseButton onClick={scrollToOffer} className="max-w-xs px-8">
               QUERO O MÉTODO QUE FUNCIONA
             </PulseButton>
           </div>
