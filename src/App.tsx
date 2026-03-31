@@ -305,8 +305,8 @@ export default function App() {
             {[
               { 
                 step: '1', 
-                title: 'Siga a alimentação sem culpa', 
-                desc: 'Tenha acesso a um cardápio completo, com receitas para cada dia do ano, todas sem açúcar e sem glúten.' 
+                title: 'Siga um Cardápio Já Pronto', 
+                desc: 'Tenha acesso a um plano completo com receitas para cada dia do ano, todas sem açúcar e sem glúten. Você não precisa pensar no que preparar!' 
               },
               { 
                 step: '2', 
