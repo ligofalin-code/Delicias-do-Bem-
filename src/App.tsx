@@ -196,7 +196,7 @@ export default function App() {
           
           <div className="mx-auto mb-8 max-w-3xl overflow-hidden rounded-3xl shadow-xl">
             <img 
-              src="https://res.cloudinary.com/dyqfspsap/image/upload/v1774973427/PRIMEIRA_IMAGEM_etgwz7.webp" 
+              src="https://res.cloudinary.com/dyqfspsap/image/upload/v1774983716/01_idxrux.webp" 
               alt="Mulher comendo doce" 
               className="w-full object-cover"
               referrerPolicy="no-referrer"
