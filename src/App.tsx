@@ -547,7 +547,7 @@ export default function App() {
           </div>
 
           <div className="mx-auto max-w-xs">
-            <PulseButton className="py-4 text-xl">
+            <PulseButton onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} className="py-4 text-xl">
               COMPRAR AGORA
             </PulseButton>
           </div>
