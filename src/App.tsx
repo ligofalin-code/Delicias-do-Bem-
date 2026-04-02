@@ -627,7 +627,10 @@ export default function App() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <PulseButton onClick={scrollToOffer} className="max-w-xs px-8 uppercase">
+            <PulseButton 
+              onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} 
+              className="max-w-xs px-8 uppercase"
+            >
               QUERO O MÉTODO QUE FUNCIONA
             </PulseButton>
           </div>
