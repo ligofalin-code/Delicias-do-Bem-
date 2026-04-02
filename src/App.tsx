@@ -104,11 +104,11 @@ const CountdownTimer = () => {
 
 const TestimonialCarousel = () => {
   const testimonials = [
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "fiz e deu super certo" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "não acredito que ficou tão bom assim" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "finalmente uma receita que funciona" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "achei que ia ser ruim, mas é muito gostoso" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "não acredito que ficou tão bom assim" }
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", quote: "fiz e deu super certo" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", quote: "não acredito que ficou tão bom assim" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", quote: "finalmente uma receita que funciona" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", quote: "achei que ia ser ruim, mas é muito gostoso" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", quote: "recomendo para todo mundo" }
   ];
 
   const [current, setCurrent] = useState(0);
@@ -125,7 +125,7 @@ const TestimonialCarousel = () => {
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
           {testimonials.map((item, index) => (
-            <div key={index} className="min-w-full bg-white flex flex-col items-center justify-center p-4">
+            <div key={index} className="min-w-full bg-white flex flex-col items-center justify-center p-6">
               <div className="aspect-square w-full flex items-center justify-center mb-4">
                 <motion.img
                   src={item.src}
@@ -143,7 +143,7 @@ const TestimonialCarousel = () => {
                   }}
                 />
               </div>
-              <p className="text-lg font-bold italic text-caramel">"{item.text}"</p>
+              <p className="text-caramel italic font-medium text-lg">"{item.quote}"</p>
             </div>
           ))}
         </motion.div>
@@ -191,10 +191,10 @@ export default function App() {
       <section className="bg-vanilla px-4 pt-6 pb-8 md:pt-10 md:pb-12">
         <div className="mx-auto max-w-5xl text-center">
           <h1 className="mb-6 text-3xl font-bold leading-tight text-dark-chocolate md:text-6xl">
-            Você ama doce, mas ele pode estar destruindo sua pele, seu corpo e sua saúde, <span className="text-caramel">mesmo sem você perceber</span>
+            Você ama doce, mas ele pode estar <span className="text-strawberry">destruindo sua pele, seu corpo e sua saúde</span>, mesmo sem você perceber
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-dark-chocolate/80 md:text-xl leading-relaxed">
-            E o pior, você tenta evitar, mas sempre volta. <span className="font-bold text-cocoa">Porque ninguém aguenta viver sem comer o que gosta</span>
+            E o pior, você tenta evitar, mas sempre volta. <span className="font-bold">Porque ninguém aguenta viver sem comer o que gosta.</span>
           </p>
           
           <div className="mx-auto mb-8 max-w-3xl overflow-hidden rounded-3xl shadow-xl">
@@ -206,14 +206,16 @@ export default function App() {
             />
           </div>
 
-          <div className="mx-auto mb-8 max-w-2xl text-left md:text-center">
-            <p className="mb-4 text-xl font-bold text-dark-chocolate">Se você já pensou isso, presta atenção:</p>
-            <div className="space-y-2 italic text-dark-chocolate/70">
+          <div className="mb-8 text-center">
+            <p className="text-xl font-bold text-dark-chocolate italic">
+              "Se você já pensou isso, presta atenção:"
+            </p>
+            <div className="mt-4 space-y-2 text-lg text-dark-chocolate/70">
               <p>‘Eu sei que não devia, mas eu como mesmo assim’</p>
               <p>‘Será que isso vai me fazer mal?’</p>
               <p>‘Depois eu compenso…’</p>
+              <p className="mt-4 text-2xl font-bold text-caramel">Você não é o problema.</p>
             </div>
-            <p className="mt-4 text-2xl font-bold text-strawberry">Você não é o problema.</p>
           </div>
 
           <div className="mb-6 flex flex-col items-center gap-3 text-left md:flex-row md:justify-center md:gap-6">
@@ -241,7 +243,7 @@ export default function App() {
 
           <div className="mx-auto max-w-xs">
             <PulseButton onClick={scrollToOffer} className="py-4 text-lg">
-              Quero comer sem medo
+              QUERO PARAR DE SOFRER COM ISSO
             </PulseButton>
           </div>
         </div>
@@ -252,20 +254,20 @@ export default function App() {
         <div className="mx-auto max-w-4xl">
           <div className="mb-6 text-center">
             <h2 className="mb-3 text-2xl font-bold text-dark-chocolate md:text-3xl">
-              ISSO PODE ESTAR ACONTECENDO COM VOCÊ E VOCÊ NEM PERCEBE
+              <span className="text-strawberry">🚨 ISSO PODE ESTAR ACONTECENDO COM VOCÊ…</span> E VOCÊ NEM PERCEBE
             </h2>
-            <p className="text-base text-dark-chocolate/80">
+            <p className="text-lg font-bold text-dark-chocolate/80">
               E muitas vezes, o problema está no que você come todos os dias.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
             {[
-              { label: 'Espinhas que não somem', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/acne_ysx15x.webp' },
-              { label: 'Rosto inchado ao acordar', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/Pele_seca_doxb5m.webp' },
-              { label: 'Pele oleosa ou sem vida', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973427/rugas_uemzf4.webp' },
-              { label: 'Cansaço constante', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/envelhecimento_precoce_fzde4h.webp' },
-              { label: 'Ganho de peso sem entender o motivo', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/degrada%C3%A7%C3%A3o_do_col%C3%A1geno_srbmhz.webp' },
+              { label: 'Acne', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/acne_ysx15x.webp' },
+              { label: 'Pele seca', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/Pele_seca_doxb5m.webp' },
+              { label: 'Rugas', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973427/rugas_uemzf4.webp' },
+              { label: 'Envelhecimento precoce', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/envelhecimento_precoce_fzde4h.webp' },
+              { label: 'Degradação do colágeno', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/degrada%C3%A7%C3%A3o_do_col%C3%A1geno_srbmhz.webp' },
               { label: 'Flacidez', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/flacidez_hgltlj.webp' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl shadow-md">
@@ -286,22 +288,26 @@ export default function App() {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl bg-vanilla p-6 shadow-inner">
               <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O problema não é falta de força de vontade.</h3>
-              <p className="mb-4 text-dark-chocolate/80">O problema é que você foi colocado em uma escolha impossível:</p>
+              <p className="mb-4 text-dark-chocolate/80 leading-relaxed">
+                O problema é que você foi colocado em uma escolha impossível:
+              </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <AlertCircle className="mt-1 flex-shrink-0 text-strawberry" size={18} strokeWidth={2.5} />
-                  <span className="text-base font-bold text-dark-chocolate/90 leading-snug">Ou você abre mão do que gosta</span>
+                  <XCircle className="mt-1 flex-shrink-0 text-strawberry" size={20} />
+                  <span className="text-lg font-bold text-dark-chocolate">Ou você abre mão do que gosta</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <AlertCircle className="mt-1 flex-shrink-0 text-strawberry" size={18} strokeWidth={2.5} />
-                  <span className="text-base font-bold text-dark-chocolate/90 leading-snug">Ou você aceita as consequências</span>
+                  <AlertCircle className="mt-1 flex-shrink-0 text-caramel" size={20} />
+                  <span className="text-lg font-bold text-dark-chocolate">Ou você aceita as consequências</span>
                 </li>
               </ul>
-              <div className="mt-6 space-y-2 border-t border-dark-chocolate/10 pt-4 text-sm text-dark-chocolate/70">
-                <p>Você já tentou fazer receita saudável e ficou ruim?</p>
-                <p>Já tentou cortar tudo e não aguentou?</p>
-                <p>Já ficou na dúvida se aquilo realmente era saudável?</p>
-                <p className="font-bold text-dark-chocolate">Você não está sozinho.</p>
+              <div className="mt-8 border-t border-cocoa/10 pt-6">
+                <p className="mb-4 font-bold text-dark-chocolate">Você não está sozinho:</p>
+                <ul className="space-y-2 text-sm text-dark-chocolate/70">
+                  <li>• Você já tentou fazer receita saudável e ficou ruim?</li>
+                  <li>• Já tentou cortar tudo e não aguentou?</li>
+                  <li>• Já ficou na dúvida se aquilo realmente era saudável?</li>
+                </ul>
               </div>
             </div>
             <div className="flex flex-col justify-center text-center md:text-left">
@@ -310,7 +316,7 @@ export default function App() {
               </h2>
               <p className="mb-6 text-lg text-dark-chocolate/70">Você só precisa aprender a fazer do jeito certo.</p>
               <PulseButton onClick={scrollToOffer} className="px-6 text-base">
-                QUERO UMA VIDA MAIS SAUDÁVEL
+                QUERO PARAR DE SOFRER COM ISSO
               </PulseButton>
             </div>
           </div>
@@ -325,17 +331,17 @@ export default function App() {
               { 
                 step: '1', 
                 title: 'Pare de viver na dúvida', 
-                desc: 'Tenha acesso a receitas que realmente funcionam e que não destroem sua saúde.' 
+                desc: 'Tenha receitas que realmente funcionam' 
               },
               { 
                 step: '2', 
                 title: 'Coma sem medo', 
-                desc: 'Sem açúcar, sem glúten e sem aquele impacto pesado no seu corpo.' 
+                desc: 'Sem açúcar, sem glúten e sem aquele impacto no corpo' 
               },
               { 
                 step: '3', 
                 title: 'Volte a sentir prazer em comer', 
-                desc: 'Sem culpa, sem restrição extrema e com o sabor que você sempre amou.' 
+                desc: 'Sem culpa, sem restrição extrema' 
               }
             ].map((item, i) => (
               <div key={i} className="relative rounded-3xl bg-white p-6 pt-10 shadow-md">
@@ -358,11 +364,12 @@ export default function App() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: <Zap size={20} />, title: 'Comer sem medo', desc: 'Sinta a liberdade de saborear o que gosta sem se preocupar com as consequências.' },
-              { icon: <Heart size={20} />, title: 'Parar de se sentir culpado', desc: 'Elimine de vez aquele peso na consciência depois de cada refeição.' },
-              { icon: <Utensils size={20} />, title: 'Ter segurança no que está consumindo', desc: 'Tenha a certeza absoluta do que está consumindo em cada prato.' },
-              { icon: <Clock size={20} />, title: 'Sentir leveza depois das refeições', desc: 'Sinta seu corpo leve e com energia constante após as refeições.' },
-              { icon: <BookOpen size={20} />, title: 'Voltar a gostar de comer', desc: 'Volte a ter uma relação positiva e prazerosa com a sua alimentação.' }
+              { icon: <Zap size={20} />, title: 'Comer sem medo', desc: 'Tenha a segurança de que o que você está comendo não vai te prejudicar.' },
+              { icon: <Heart size={20} />, title: 'Parar de se sentir culpado', desc: 'Acabe com o ciclo de comer e se arrepender logo em seguida.' },
+              { icon: <Utensils size={20} />, title: 'Ter segurança no que está consumindo', desc: 'Saiba exatamente cada ingrediente e o impacto dele na sua saúde.' },
+              { icon: <Clock size={20} />, title: 'Sentir leveza depois das refeições', desc: 'Diga adeus ao inchaço e àquela sensação de peso no estômago.' },
+              { icon: <BookOpen size={20} />, title: 'Voltar a gostar de comer', desc: 'Redescubra o prazer de saborear pratos incríveis sem restrições extremas.' },
+              { icon: <Star size={20} />, title: 'Controle real', desc: 'Assuma as rédeas da sua alimentação de uma vez por todas.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 rounded-2xl bg-vanilla/20 p-5 transition-all hover:bg-vanilla/40">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-caramel shadow-sm">
@@ -391,10 +398,9 @@ export default function App() {
           <div className="grid gap-4">
             {[
               { title: 'CAFÉ DA MANHÃ E LANCHES', text: 'Café da manhã que você pode comer sem culpa', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/cafe_da_manha_yi2kxn.webp' },
-              { title: 'ALMOÇO E JANTAR', text: 'Comida de verdade, com sabor de verdade', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/almo%C3%A7o_e_jantar_svesw0.webp' },
+              { title: 'ALMOÇO E JANTAR', text: 'Almoço e jantar com comida de verdade', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/almo%C3%A7o_e_jantar_svesw0.webp' },
               { title: 'DOCES E SOBREMESAS', text: 'Sobremesas que parecem normais, mas não fazem mal', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/doces_e_sobremesas_jchkov.webp' },
-              { title: 'MOLHOS E PATÊS', text: 'Receitas que realmente funcionam na prática', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/pates_lnbksg.webp' },
-              { title: 'SOPAS E CREMES', text: 'Leves, cremosos e reconfortantes', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973428/sopas_vw4jek.webp' }
+              { title: 'MOLHOS E PATÊS', text: 'Receitas que realmente funcionam na prática', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/pates_lnbksg.webp' }
             ].map((item, i) => (
               <div key={i} className="group flex flex-col overflow-hidden rounded-3xl bg-white shadow-md transition-all hover:shadow-lg md:flex-row">
                 <div className="h-40 overflow-hidden md:h-auto md:w-1/3">
@@ -463,7 +469,7 @@ export default function App() {
           </div>
           <div className="mt-6 text-center">
             <PulseButton onClick={scrollToOffer} className="max-w-xs px-8">
-              QUERO COMEÇAR AGORA
+              QUERO PARAR DE SOFRER COM ISSO
             </PulseButton>
           </div>
         </div>
@@ -520,9 +526,17 @@ export default function App() {
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-center shadow-xl md:p-10">
           <h2 className="mb-4 text-2xl font-bold text-strawberry md:text-4xl">OFERTA POR TEMPO LIMITADO!</h2>
           
-          <p className="mb-8 text-xl font-bold text-dark-chocolate">
-            Você pode continuar vivendo na dúvida, ou pode finalmente ter controle sobre o que você come.
-          </p>
+          <div className="mb-6">
+            <p className="text-xl font-bold text-dark-chocolate leading-tight">
+              Você pode continuar vivendo na dúvida, ou pode finalmente ter controle sobre o que você come.
+            </p>
+            <p className="mt-2 text-lg text-dark-chocolate/70">
+              Hoje você não precisa abrir mão do que gosta.
+            </p>
+            <p className="mt-2 text-sm font-bold text-strawberry animate-pulse">
+              Mas essa condição pode sair do ar a qualquer momento.
+            </p>
+          </div>
 
           <div className="mb-4 flex flex-col items-center gap-6 md:flex-row">
             <div className="md:w-1/2">
@@ -534,7 +548,7 @@ export default function App() {
               />
             </div>
             <div className="text-left md:w-1/2">
-              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">Hoje você não precisa abrir mão do que gosta:</h3>
+              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O que você leva:</h3>
               <ul className="space-y-2">
                 {[
                   '+365 Receitas Zero Açúcar e sem Glúten',
@@ -554,7 +568,6 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm font-bold text-strawberry">Mas essa condição pode sair do ar a qualquer momento.</p>
             </div>
           </div>
 
@@ -564,10 +577,13 @@ export default function App() {
             <p className="text-4xl font-bold text-cta whitespace-nowrap md:text-5xl">R$ 10,00</p>
           </div>
 
-          <div className="mx-auto max-w-xs">
-            <div className="mb-4 text-sm font-bold text-dark-chocolate">
+          <div className="mb-6 text-center">
+            <p className="text-lg font-bold text-dark-chocolate leading-tight">
               Ou você continua abrindo mão de tudo… ou aprende de uma vez por todas a fazer do jeito certo.
-            </div>
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-xs">
             <PulseButton onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} className="py-4 text-xl">
               QUERO PARAR DE SOFRER COM ISSO
             </PulseButton>
@@ -584,13 +600,13 @@ export default function App() {
             <div className="group relative overflow-hidden rounded-2xl bg-strawberry/5 p-6 border border-strawberry/10">
               <h3 className="mb-4 flex items-center gap-2 text-xl font-bold text-strawberry">
                 <XCircle size={24} strokeWidth={2.5} />
-                O que NÃO funciona
+                O que NÃO funciona (e te faz sofrer)
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Comer pouco e passar fome",
-                  "Seguir dietas complicadas e caras",
-                  "Deixar de comer o que você gosta"
+                  "Passar fome e viver de restrição",
+                  "Dietas caras que você não consegue manter",
+                  "Abrir mão do prazer de comer"
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-strawberry/10">
@@ -625,9 +641,6 @@ export default function App() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <div className="mb-4 text-sm font-bold text-dark-chocolate">
-              Ou você continua abrindo mão de tudo… ou aprende de uma vez por todas a fazer do jeito certo.
-            </div>
             <PulseButton onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} className="max-w-xs px-8">
               QUERO PARAR DE SOFRER COM ISSO
             </PulseButton>
