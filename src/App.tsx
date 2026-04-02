@@ -106,8 +106,8 @@ const TestimonialCarousel = () => {
   const testimonials = [
     { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "fiz e ficou muito bom" },
     { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "nem parece sem açúcar" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "achei que ia dar errado, mas deu super certo" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "minha pele melhorou depois que comecei" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "minha pele melhorou depois que comecei" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "achei que ia dar errado, mas deu super certo" },
     { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "fiz e ficou muito bom" }
   ];
 
@@ -187,11 +187,12 @@ export default function App() {
       {/* Hero Section */}
       <section className="bg-vanilla px-4 pt-6 pb-8 md:pt-10 md:pb-12">
         <div className="mx-auto max-w-5xl text-center">
+          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-strawberry">Se sua pele está piorando, o açúcar pode ser o motivo</p>
           <h1 className="mb-6 text-3xl font-bold leading-tight text-dark-chocolate md:text-6xl">
             Você ama doce, mas o açúcar pode estar <span className="text-strawberry">destruindo sua pele, causando inchaço, acelerando o envelhecimento</span> e você nem percebe
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-text-main md:text-xl leading-relaxed">
-            Você tenta evitar mas sempre volta, porque <span className="font-bold text-chocolate">ninguém consegue viver sem comer o que gosta.</span>
+            Você tenta evitar, mas sempre volta, porque <span className="font-bold text-chocolate">ninguém consegue viver sem comer o que gosta.</span>
           </p>
           
           <div className="mx-auto mb-8 max-w-3xl overflow-hidden rounded-3xl shadow-xl">
@@ -206,9 +207,9 @@ export default function App() {
           <div className="mb-8 text-center bg-white/50 p-6 rounded-2xl border border-caramel/10">
             <p className="text-lg font-medium text-dark-chocolate mb-4">Se você já pensou:</p>
             <div className="italic text-text-main/70 space-y-1 mb-4">
-              <p>“Só hoje não tem problema…”</p>
-              <p>“Depois eu compenso…”</p>
-              <p>“Será que isso está me fazendo mal?”</p>
+              <p>‘Só hoje não tem problema…’</p>
+              <p>‘Depois eu compenso…’</p>
+              <p>‘Será que isso está me fazendo mal?’</p>
             </div>
             <p className="text-xl font-bold text-strawberry">Você não é o problema.</p>
           </div>
@@ -240,6 +241,7 @@ export default function App() {
             <PulseButton onClick={scrollToOffer} className="py-4 text-lg uppercase">
               Quero comer sem medo
             </PulseButton>
+            <p className="mt-3 text-xs font-bold text-strawberry animate-pulse">Essa condição pode acabar hoje</p>
           </div>
         </div>
       </section>
@@ -251,9 +253,11 @@ export default function App() {
             <h2 className="mb-3 text-2xl font-bold text-dark-chocolate md:text-3xl">
               <span className="text-strawberry">🚨 ISSO PODE ESTAR ACONTECENDO COM VOCÊ…</span> E VOCÊ NEM PERCEBE
             </h2>
-            <p className="text-lg font-medium text-text-main/80">
-              Muitas vezes, o problema não é genética, é o que você consome todos os dias.
-            </p>
+            <div className="text-lg font-medium text-text-main/80 space-y-2">
+              <p>Você já acordou com o rosto inchado?</p>
+              <p>Já percebeu sua pele piorar depois de comer doce?</p>
+              <p>Ou sente que sua pele reage ao que você come?</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
@@ -309,10 +313,10 @@ export default function App() {
             </div>
             <div className="flex flex-col justify-center text-center md:text-left">
               <h2 className="mb-4 text-2xl font-bold text-dark-chocolate leading-tight">
-                Foi aí que tudo mudou…
+                Foi aí que tudo mudou...
               </h2>
               <p className="mb-6 text-lg text-text-main/80">
-                Quando eu percebi que não precisava parar de comer… só precisava mudar a forma de preparar.
+                Quando eu percebi que não precisava parar de comer doce, só precisava mudar a forma de preparar.
               </p>
               <PulseButton onClick={scrollToOffer} className="px-6 text-base uppercase">
                 QUERO APRENDER O JEITO CERTO
@@ -329,18 +333,18 @@ export default function App() {
             {[
               { 
                 step: '1', 
-                title: 'Pare de se sentir culpado toda vez que come doce', 
-                desc: 'Tenha acesso a receitas pensadas para o dia a dia e que não te deixam na mão.' 
+                title: 'Pare de se sentir culpada toda vez que come doce', 
+                desc: 'Tenha acesso a receitas práticas para o dia a dia' 
               },
               { 
                 step: '2', 
                 title: 'Coma sem prejudicar sua pele e seu corpo', 
-                desc: 'Receitas simples, rápidas e com sabor de verdade, sem o impacto do açúcar.' 
+                desc: 'Receitas simples, rápidas e com sabor de verdade' 
               },
               { 
                 step: '3', 
                 title: 'Volte a se sentir bem com seu corpo', 
-                desc: 'Menos inchaço, mais leveza e mais confiança para o seu dia a dia.' 
+                desc: 'Menos inchaço, mais leveza e mais confiança' 
               }
             ].map((item, i) => (
               <div key={i} className="relative rounded-3xl bg-white p-6 pt-10 shadow-md">
@@ -363,10 +367,10 @@ export default function App() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: <Utensils size={20} />, title: 'Comer sem culpa', desc: 'Saboreie o que você ama sem o peso na consciência após cada sobremesa.' },
+              { icon: <Utensils size={20} />, title: 'Comer sem culpa', desc: 'Saboreie o que você ama sem o peso na consciência.' },
               { icon: <Heart size={20} />, title: 'Reduzir o inchaço', desc: 'Sinta a diferença imediata no seu corpo, com muito mais leveza.' },
-              { icon: <Zap size={20} />, title: 'Melhorar a aparência da pele', desc: 'Recupere o brilho e a saúde da sua pele cuidando da alimentação.' },
-              { icon: <Star size={20} />, title: 'Mais energia no dia a dia', desc: 'Evite os picos de açúcar e tenha disposição constante para suas tarefas.' },
+              { icon: <Zap size={20} />, title: 'Melhorar a aparência da pele', desc: 'Recupere o brilho e a saúde da sua pele.' },
+              { icon: <Star size={20} />, title: 'Ter mais energia', desc: 'Evite os picos de açúcar e tenha disposição constante.' },
               { icon: <Clock size={20} />, title: 'Não depender de dietas restritivas', desc: 'Aprenda a comer bem de forma equilibrada e prazerosa.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 rounded-2xl bg-vanilla/20 p-5 transition-all hover:bg-vanilla/40">
@@ -395,10 +399,10 @@ export default function App() {
 
           <div className="grid gap-4">
             {[
-              { title: 'CAFÉ DA MANHÃ E LANCHES', text: 'Café da manhã prático e gostoso', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/cafe_da_manha_yi2kxn.webp' },
-              { title: 'ALMOÇO E JANTAR', text: 'Comida de verdade, com sabor de verdade', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/almo%C3%A7o_e_jantar_svesw0.webp' },
-              { title: 'DOCES E SOBREMESAS', text: 'Sobremesas que você pode comer sem culpa', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/doces_e_sobremesas_jchkov.webp' },
-              { title: 'MOLHOS E PATÊS', text: 'Sabores que transformam qualquer refeição', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/pates_lnbksg.webp' },
+              { title: 'CAFÉ DA MANHÃ E LANCHES', text: 'Café da manhã gostoso e sem culpa', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/cafe_da_manha_yi2kxn.webp' },
+              { title: 'ALMOÇO E JANTAR', text: 'Almoço e jantar com comida de verdade', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/almo%C3%A7o_e_jantar_svesw0.webp' },
+              { title: 'DOCES E SOBREMESAS', text: 'Sobremesas que parecem normais, mas não prejudicam seu corpo', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/doces_e_sobremesas_jchkov.webp' },
+              { title: 'MOLHOS E PATÊS', text: 'Receitas simples que funcionam na prática', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/pates_lnbksg.webp' },
               { title: 'SOPAS E CREMES', text: 'Leves, cremosos e reconfortantes', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973428/sopas_vw4jek.webp' }
             ].map((item, i) => (
               <div key={i} className="group flex flex-col overflow-hidden rounded-3xl bg-white shadow-md transition-all hover:shadow-lg md:flex-row">
@@ -445,7 +449,7 @@ export default function App() {
           />
           <h2 className="mb-2 text-xl font-bold text-dark-chocolate md:text-2xl">GARANTIA DE SATISFAÇÃO</h2>
           <p className="text-base text-text-main/80">
-            Você tem 7 dias para testar todas as receitas. Se por qualquer motivo você não gostar, nós devolvemos 100% do seu dinheiro.
+            Você tem 7 dias para testar. Se não gostar, devolvemos 100% do seu dinheiro.
           </p>
         </div>
       </section>
@@ -476,6 +480,7 @@ export default function App() {
             <PulseButton onClick={scrollToOffer} className="max-w-xs px-8 uppercase">
               QUERO COMEÇAR AGORA
             </PulseButton>
+            <p className="mt-3 text-xs font-bold text-strawberry">Não sei até quando esse valor vai continuar disponível</p>
           </div>
         </div>
       </section>
@@ -486,7 +491,7 @@ export default function App() {
           <span className="mb-2 inline-block rounded-full bg-strawberry/10 px-4 py-1 text-xs font-bold text-strawberry uppercase tracking-widest">Bônus Exclusivos</span>
           <h2 className="mb-4 text-2xl font-bold text-dark-chocolate md:text-3xl">PRA VOCÊ QUE CHEGOU ATÉ AQUI</h2>
           <p className="mb-4 text-lg text-text-main/80">
-            Além das receitas, você ainda recebe bônus exclusivos para facilitar ainda mais sua rotina
+            Além das receitas, você ainda recebe bônus exclusivos para facilitar sua rotina
           </p>
 
           <div className="mb-6">
@@ -521,7 +526,7 @@ export default function App() {
 
           <div className="mt-6">
             <p className="text-lg text-text-main/60">Tudo o que você vai receber soma mais de <span className="font-bold text-price-old line-through">R$ 99,90</span></p>
-            <p className="mt-2 text-xl font-bold text-dark-chocolate">Mas hoje você não irá pagar esse valor... embora valha cada centavo.</p>
+            <p className="mt-2 text-xl font-bold text-dark-chocolate">Mas hoje você não irá pagar esse valor, embora valha cada centavo.</p>
           </div>
         </div>
       </section>
@@ -566,7 +571,8 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm font-bold text-caramel">Menos de R$0,03 por receita</p>
+              <p className="mt-4 text-sm font-bold text-caramel">Menos que um doce comum</p>
+              <p className="mt-2 text-sm font-bold text-caramel">Menos de R$0,03 por receita</p>
               <p className="mt-2 text-sm font-bold text-strawberry animate-pulse">Essa condição pode sair do ar a qualquer momento</p>
             </div>
           </div>
@@ -578,7 +584,10 @@ export default function App() {
           </div>
 
           <div className="mx-auto max-w-xs">
-            <p className="mb-4 text-sm font-bold text-text-main">Você pode continuar comendo da mesma forma… ou pode finalmente aprender a comer bem sem prejudicar seu corpo</p>
+            <div className="mb-4 text-sm font-bold text-text-main space-y-2">
+              <p>Se você sair dessa página, vai continuar comendo da mesma forma</p>
+              <p>E isso continua afetando sua pele todos os dias.</p>
+            </div>
             <PulseButton 
               onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} 
               className="py-4 text-xl uppercase"
