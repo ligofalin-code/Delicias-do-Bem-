@@ -4,21 +4,24 @@
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   
-  --color-chocolate: #4B2E2B;
+  --color-chocolate: #4E342E;
   --color-cocoa: #7B4F3A;
-  --color-caramel: #D97706;
-  --color-vanilla: #FFF3E0;
-  --color-dark-chocolate: #2C1B18;
+  --color-caramel: #C67C4E;
+  --color-vanilla: #F5E9DC;
+  --color-vanilla-dark: #EAD7C5;
+  --color-dark-chocolate: #3E2723;
+  --color-text-main: #2B2B2B;
   --color-strawberry: #E11D48;
   --color-bright-red: #FF0000;
-  --color-neon-green: #22C55E;
   --color-cta: #22C55E;
   --color-cta-hover: #16A34A;
+  --color-price: #16A34A;
+  --color-price-old: #9CA3AF;
 }
 
 body {
   background-color: var(--color-vanilla);
-  color: var(--color-dark-chocolate);
+  color: var(--color-text-main);
   font-family: var(--font-sans);
 }
 

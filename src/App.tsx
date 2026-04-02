@@ -60,9 +60,9 @@ const PulseButton = ({ children, className = "", onClick }: { children: ReactNod
     animate={{ 
       scale: [1, 1.03, 1],
       boxShadow: [
-        "0 10px 15px -3px rgba(34, 197, 94, 0.3)",
-        "0 20px 25px -5px rgba(34, 197, 94, 0.5)",
-        "0 10px 15px -3px rgba(34, 197, 94, 0.3)"
+        "0 10px 20px -5px rgba(34, 197, 94, 0.4)",
+        "0 20px 40px -10px rgba(34, 197, 94, 0.6)",
+        "0 10px 20px -5px rgba(34, 197, 94, 0.4)"
       ]
     }}
     transition={{ 
@@ -70,7 +70,7 @@ const PulseButton = ({ children, className = "", onClick }: { children: ReactNod
       repeat: Infinity,
       ease: "easeInOut"
     }}
-    className={`w-full rounded-full bg-cta py-5 text-xl font-bold text-white shadow-xl transition-all hover:bg-cta-hover active:scale-95 uppercase ${className}`}
+    className={`w-full rounded-2xl bg-cta py-5 text-xl font-bold text-white shadow-2xl transition-all hover:bg-cta-hover active:scale-95 uppercase ${className}`}
   >
     {children}
   </motion.button>
@@ -104,11 +104,11 @@ const CountdownTimer = () => {
 
 const TestimonialCarousel = () => {
   const testimonials = [
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "fiz e deu super certo" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "não acredito que ficou tão bom assim" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "finalmente uma receita que funciona" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "achei que ia ser ruim, mas é muito gostoso" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "fiz e deu super certo" }
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "fiz e ficou muito bom" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "nem parece sem açúcar" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "achei que ia dar errado, mas deu super certo" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "minha pele melhorou depois que comecei" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "fiz e ficou muito bom" }
   ];
 
   const [current, setCurrent] = useState(0);
@@ -188,10 +188,10 @@ export default function App() {
       <section className="bg-vanilla px-4 pt-6 pb-8 md:pt-10 md:pb-12">
         <div className="mx-auto max-w-5xl text-center">
           <h1 className="mb-6 text-3xl font-bold leading-tight text-dark-chocolate md:text-6xl">
-            Você ama doce, mas ele pode estar <span className="text-strawberry">destruindo sua pele, seu corpo e sua saúde</span>, mesmo sem você perceber
+            Você ama doce, mas o açúcar pode estar <span className="text-strawberry">destruindo sua pele, causando inchaço, acelerando o envelhecimento</span> e você nem percebe
           </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-dark-chocolate/80 md:text-xl leading-relaxed">
-            E o pior, você tenta evitar, mas sempre volta. Porque <span className="font-bold text-cocoa">ninguém aguenta viver sem comer o que gosta.</span>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-text-main md:text-xl leading-relaxed">
+            Você tenta evitar mas sempre volta, porque <span className="font-bold text-chocolate">ninguém consegue viver sem comer o que gosta.</span>
           </p>
           
           <div className="mx-auto mb-8 max-w-3xl overflow-hidden rounded-3xl shadow-xl">
@@ -204,35 +204,35 @@ export default function App() {
           </div>
 
           <div className="mb-8 text-center bg-white/50 p-6 rounded-2xl border border-caramel/10">
-            <p className="text-lg font-medium text-dark-chocolate mb-4">Se você já pensou isso, presta atenção:</p>
-            <div className="italic text-dark-chocolate/70 space-y-1 mb-4">
-              <p>“Eu sei que não devia, mas eu como mesmo assim”</p>
-              <p>“Será que isso vai me fazer mal?”</p>
+            <p className="text-lg font-medium text-dark-chocolate mb-4">Se você já pensou:</p>
+            <div className="italic text-text-main/70 space-y-1 mb-4">
+              <p>“Só hoje não tem problema…”</p>
               <p>“Depois eu compenso…”</p>
+              <p>“Será que isso está me fazendo mal?”</p>
             </div>
             <p className="text-xl font-bold text-strawberry">Você não é o problema.</p>
           </div>
 
           <div className="mb-6 flex flex-col items-center gap-3 text-left md:flex-row md:justify-center md:gap-6">
-            <div className="flex items-center gap-2 font-bold text-cocoa text-sm md:text-base">
+            <div className="flex items-center gap-2 font-bold text-chocolate text-sm md:text-base">
               <Check className="text-strawberry" size={18} />
               <span>Receitas fáceis</span>
             </div>
-            <div className="flex items-center gap-2 font-bold text-cocoa text-sm md:text-base">
+            <div className="flex items-center gap-2 font-bold text-chocolate text-sm md:text-base">
               <Check className="text-strawberry" size={18} />
               <span>Ingredientes simples</span>
             </div>
-            <div className="flex items-center gap-2 font-bold text-cocoa text-sm md:text-base">
+            <div className="flex items-center gap-2 font-bold text-chocolate text-sm md:text-base">
               <Check className="text-strawberry" size={18} />
               <span>Sabor de verdade</span>
             </div>
           </div>
 
           <div className="mb-6 inline-block rounded-xl bg-white p-4 shadow-md border border-caramel/20">
-            <p className="text-[10px] uppercase tracking-widest text-cocoa">Oferta Exclusiva</p>
+            <p className="text-[10px] uppercase tracking-widest text-chocolate">Oferta Exclusiva</p>
             <div className="flex items-center justify-center gap-2">
-              <span className="text-base text-bright-red font-bold line-through">R$ 99,90</span>
-              <span className="text-2xl font-bold text-cta md:text-3xl">R$ 10,00</span>
+              <span className="text-base text-price-old font-bold line-through">R$ 99,90</span>
+              <span className="text-2xl font-bold text-price md:text-3xl">R$ 10,00</span>
             </div>
           </div>
 
@@ -251,8 +251,8 @@ export default function App() {
             <h2 className="mb-3 text-2xl font-bold text-dark-chocolate md:text-3xl">
               <span className="text-strawberry">🚨 ISSO PODE ESTAR ACONTECENDO COM VOCÊ…</span> E VOCÊ NEM PERCEBE
             </h2>
-            <p className="text-lg font-medium text-dark-chocolate/80">
-              E muitas vezes, o problema está no que você come todos os dias.
+            <p className="text-lg font-medium text-text-main/80">
+              Muitas vezes, o problema não é genética, é o que você consome todos os dias.
             </p>
           </div>
 
@@ -283,32 +283,37 @@ export default function App() {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl bg-vanilla p-6 shadow-inner">
               <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O problema não é falta de força de vontade.</h3>
-              <p className="mb-4 text-dark-chocolate/80">O problema é que você foi colocado em uma escolha impossível:</p>
+              <p className="mb-4 text-text-main/80">O problema é que você foi levado a acreditar que precisa:</p>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 font-bold text-strawberry">
                   <XCircle size={20} />
-                  <span>Ou você abre mão do que gosta</span>
+                  <span>Parar de comer o que gosta</span>
                 </li>
                 <li className="flex items-center gap-3 font-bold text-strawberry">
                   <XCircle size={20} />
-                  <span>Ou você aceita as consequências</span>
+                  <span>Fazer dietas restritivas</span>
+                </li>
+                <li className="flex items-center gap-3 font-bold text-strawberry">
+                  <XCircle size={20} />
+                  <span>Viver com culpa</span>
                 </li>
               </ul>
               
-              <div className="mt-8 pt-6 border-t border-cocoa/10">
-                <p className="font-bold text-dark-chocolate mb-3">Você não está sozinho se:</p>
-                <ul className="space-y-2 text-sm text-dark-chocolate/70">
-                  <li>• Já tentou fazer receita saudável e ficou ruim?</li>
-                  <li>• Já tentou cortar tudo e não aguentou?</li>
-                  <li>• Já ficou na dúvida se aquilo realmente era saudável?</li>
+              <div className="mt-8 pt-6 border-t border-chocolate/10">
+                <p className="font-bold text-dark-chocolate mb-3">Mas a verdade é simples:</p>
+                <ul className="space-y-2 text-sm text-text-main/70">
+                  <li>Você não precisa parar de comer doce.</li>
+                  <li>Você só precisa aprender a fazer do jeito certo.</li>
                 </ul>
               </div>
             </div>
             <div className="flex flex-col justify-center text-center md:text-left">
               <h2 className="mb-4 text-2xl font-bold text-dark-chocolate leading-tight">
-                A verdade é simples: <span className="text-caramel">Você não precisa parar de comer.</span>
+                Foi aí que tudo mudou…
               </h2>
-              <p className="mb-6 text-lg text-dark-chocolate/80">Você só precisa aprender a fazer do jeito certo.</p>
+              <p className="mb-6 text-lg text-text-main/80">
+                Quando eu percebi que não precisava parar de comer… só precisava mudar a forma de preparar.
+              </p>
               <PulseButton onClick={scrollToOffer} className="px-6 text-base uppercase">
                 QUERO APRENDER O JEITO CERTO
               </PulseButton>
@@ -318,24 +323,24 @@ export default function App() {
       </section>
 
       {/* Steps Section */}
-      <section className="bg-vanilla px-4 py-4 md:py-6">
+      <section className="bg-vanilla-dark px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl">
           <div className="grid gap-4 md:grid-cols-3">
             {[
               { 
                 step: '1', 
-                title: 'Pare de viver na dúvida', 
-                desc: 'Tenha receitas que realmente funcionam e que não te deixam na mão na hora de preparar.' 
+                title: 'Pare de se sentir culpado toda vez que come doce', 
+                desc: 'Tenha acesso a receitas pensadas para o dia a dia e que não te deixam na mão.' 
               },
               { 
                 step: '2', 
-                title: 'Coma sem medo', 
-                desc: 'Sem açúcar, sem glúten e sem aquele impacto devastador no seu corpo e na sua saúde.' 
+                title: 'Coma sem prejudicar sua pele e seu corpo', 
+                desc: 'Receitas simples, rápidas e com sabor de verdade, sem o impacto do açúcar.' 
               },
               { 
                 step: '3', 
-                title: 'Volte a sentir prazer em comer', 
-                desc: 'Sem culpa, sem restrição extrema e sem aquela sensação de estar sempre perdendo o melhor da vida.' 
+                title: 'Volte a se sentir bem com seu corpo', 
+                desc: 'Menos inchaço, mais leveza e mais confiança para o seu dia a dia.' 
               }
             ].map((item, i) => (
               <div key={i} className="relative rounded-3xl bg-white p-6 pt-10 shadow-md">
@@ -343,7 +348,7 @@ export default function App() {
                   {item.step}
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-dark-chocolate leading-tight">{item.title}</h3>
-                <p className="text-sm text-dark-chocolate/70 leading-snug">{item.desc}</p>
+                <p className="text-sm text-text-main/70 leading-snug">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -358,11 +363,11 @@ export default function App() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: <Utensils size={20} />, title: 'Comer sem medo', desc: 'Saboreie o que você ama sem a preocupação constante com o que isso está fazendo com você.' },
-              { icon: <Heart size={20} />, title: 'Parar de se sentir culpado', desc: 'Elimine de vez o peso na consciência após cada refeição ou sobremesa.' },
-              { icon: <Zap size={20} />, title: 'Segurança no consumo', desc: 'Tenha a certeza absoluta de que o que você está comendo é realmente saudável.' },
-              { icon: <Star size={20} />, title: 'Leveza real', desc: 'Sinta a diferença imediata no seu corpo, sem inchaço e com muito mais disposição.' },
-              { icon: <Clock size={20} />, title: 'Voltar a gostar de comer', desc: 'Recupere o prazer genuíno de se alimentar bem, sem as amarras da restrição severa.' }
+              { icon: <Utensils size={20} />, title: 'Comer sem culpa', desc: 'Saboreie o que você ama sem o peso na consciência após cada sobremesa.' },
+              { icon: <Heart size={20} />, title: 'Reduzir o inchaço', desc: 'Sinta a diferença imediata no seu corpo, com muito mais leveza.' },
+              { icon: <Zap size={20} />, title: 'Melhorar a aparência da pele', desc: 'Recupere o brilho e a saúde da sua pele cuidando da alimentação.' },
+              { icon: <Star size={20} />, title: 'Mais energia no dia a dia', desc: 'Evite os picos de açúcar e tenha disposição constante para suas tarefas.' },
+              { icon: <Clock size={20} />, title: 'Não depender de dietas restritivas', desc: 'Aprenda a comer bem de forma equilibrada e prazerosa.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 rounded-2xl bg-vanilla/20 p-5 transition-all hover:bg-vanilla/40">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-caramel shadow-sm">
@@ -370,7 +375,7 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="mb-1 text-base font-bold text-dark-chocolate">{item.title}</h3>
-                  <p className="text-sm text-dark-chocolate/70 leading-snug">{item.desc}</p>
+                  <p className="text-sm text-text-main/70 leading-snug">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -384,7 +389,7 @@ export default function App() {
           <h2 className="mb-4 text-2xl font-bold text-dark-chocolate md:text-3xl">
             📅 365 DIAS DE CARDÁPIOS PRONTOS PRA VOCÊ
           </h2>
-          <p className="mx-auto mb-6 max-w-2xl text-base text-dark-chocolate/80 leading-relaxed">
+          <p className="mx-auto mb-6 max-w-2xl text-base text-text-main/80 leading-relaxed">
             Você não vai precisar pensar no que comer… <span className="font-bold text-caramel">já está tudo pronto pra você</span>.
           </p>
 
@@ -412,6 +417,12 @@ export default function App() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 text-center">
+            <PulseButton onClick={scrollToOffer} className="max-w-xs px-8 uppercase">
+              QUERO MINHAS RECEITAS
+            </PulseButton>
+          </div>
         </div>
       </section>
 
@@ -424,7 +435,7 @@ export default function App() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="bg-vanilla px-4 py-4 md:py-6">
+      <section className="bg-vanilla-dark px-4 py-4 md:py-6">
         <div className="mx-auto max-w-2xl text-center">
           <img 
             src="https://res.cloudinary.com/dyqfspsap/image/upload/v1773788489/SELO_GARANTIA_IMAGEM_pekub3.webp" 
@@ -433,7 +444,7 @@ export default function App() {
             referrerPolicy="no-referrer"
           />
           <h2 className="mb-2 text-xl font-bold text-dark-chocolate md:text-2xl">GARANTIA DE SATISFAÇÃO</h2>
-          <p className="text-base text-dark-chocolate/80">
+          <p className="text-base text-text-main/80">
             Você tem 7 dias para testar todas as receitas. Se por qualquer motivo você não gostar, nós devolvemos 100% do seu dinheiro.
           </p>
         </div>
@@ -456,7 +467,7 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-dark-chocolate leading-tight">{item.title}</h3>
-                  <p className="text-sm text-dark-chocolate/70 leading-snug">{item.desc}</p>
+                  <p className="text-sm text-text-main/70 leading-snug">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -474,8 +485,8 @@ export default function App() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-2 inline-block rounded-full bg-strawberry/10 px-4 py-1 text-xs font-bold text-strawberry uppercase tracking-widest">Bônus Exclusivos</span>
           <h2 className="mb-4 text-2xl font-bold text-dark-chocolate md:text-3xl">PRA VOCÊ QUE CHEGOU ATÉ AQUI</h2>
-          <p className="mb-4 text-lg text-dark-chocolate/80">
-            AO COMPRAR AS DELICIAS DO BEM HOJE, VOCÊ RECEBERÁ <span className="font-bold text-caramel">6 BÔNUS EXCLUSIVOS</span>
+          <p className="mb-4 text-lg text-text-main/80">
+            Além das receitas, você ainda recebe bônus exclusivos para facilitar ainda mais sua rotina
           </p>
 
           <div className="mb-6">
@@ -509,20 +520,20 @@ export default function App() {
           </div>
 
           <div className="mt-6">
-            <p className="text-lg text-dark-chocolate/60">Tudo o que você vai receber soma mais de <span className="font-bold text-bright-red line-through">R$ 99,90</span></p>
+            <p className="text-lg text-text-main/60">Tudo o que você vai receber soma mais de <span className="font-bold text-price-old line-through">R$ 99,90</span></p>
             <p className="mt-2 text-xl font-bold text-dark-chocolate">Mas hoje você não irá pagar esse valor... embora valha cada centavo.</p>
           </div>
         </div>
       </section>
 
       {/* Offer Section */}
-      <section id="oferta" className="bg-vanilla px-4 py-4 md:py-6">
-        <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-center shadow-xl md:p-10">
+      <section id="oferta" className="bg-vanilla-dark px-4 py-4 md:py-6">
+        <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-center shadow-xl md:p-10 border border-gray-100">
           <h2 className="mb-4 text-2xl font-bold text-strawberry md:text-4xl">OFERTA POR TEMPO LIMITADO!</h2>
           
           <p className="mb-8 text-xl font-bold text-dark-chocolate">
-            Você pode continuar vivendo na dúvida… <br/>
-            <span className="text-cta">ou pode finalmente ter controle sobre o que você come</span>
+            Hoje você não precisa abrir mão do que gosta <br/>
+            <span className="text-price">Por um valor simbólico, você tem acesso a tudo isso</span>
           </p>
 
           <div className="mb-4 flex flex-col items-center gap-6 md:flex-row">
@@ -535,7 +546,7 @@ export default function App() {
               />
             </div>
             <div className="text-left md:w-1/2">
-              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">Hoje você não precisa abrir mão do que gosta:</h3>
+              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O que você leva hoje:</h3>
               <ul className="space-y-2">
                 {[
                   '+365 Receitas Zero Açúcar e sem Glúten',
@@ -555,18 +566,19 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm font-bold text-strawberry animate-pulse">Mas essa condição pode sair do ar a qualquer momento</p>
+              <p className="mt-4 text-sm font-bold text-caramel">Menos de R$0,03 por receita</p>
+              <p className="mt-2 text-sm font-bold text-strawberry animate-pulse">Essa condição pode sair do ar a qualquer momento</p>
             </div>
           </div>
 
           <div className="mb-4 rounded-2xl bg-vanilla p-6">
-            <p className="text-base text-bright-red font-bold line-through">DE: R$ 99,90</p>
+            <p className="text-base text-price-old font-bold line-through">DE: R$ 99,90</p>
             <p className="text-lg font-bold text-dark-chocolate uppercase tracking-widest">POR APENAS</p>
-            <p className="text-4xl font-bold text-cta whitespace-nowrap md:text-5xl">R$ 10,00</p>
+            <p className="text-4xl font-bold text-price whitespace-nowrap md:text-5xl">R$ 10,00</p>
           </div>
 
           <div className="mx-auto max-w-xs">
-            <p className="mb-4 text-sm font-bold text-dark-chocolate">Ou você continua abrindo mão de tudo… ou aprende de uma vez por todas a fazer do jeito certo</p>
+            <p className="mb-4 text-sm font-bold text-text-main">Você pode continuar comendo da mesma forma… ou pode finalmente aprender a comer bem sem prejudicar seu corpo</p>
             <PulseButton 
               onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} 
               className="py-4 text-xl uppercase"
