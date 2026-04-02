@@ -77,7 +77,7 @@ const PulseButton = ({ children, className = "", onClick }: { children: ReactNod
 );
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState(7 * 60); // 7 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(16 * 60); // 16 minutes in seconds
 
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -604,7 +604,7 @@ export default function App() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <PulseButton onClick={scrollToOffer} className="max-w-xs px-8">
+            <PulseButton onClick={() => window.location.href = 'https://pay.wiapy.com/cC4Kzh6lIn'} className="max-w-xs px-8">
               QUERO O MÉTODO QUE FUNCIONA
             </PulseButton>
           </div>
