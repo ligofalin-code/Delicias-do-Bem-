@@ -77,7 +77,7 @@ const PulseButton = ({ children, className = "", onClick }: { children: ReactNod
 );
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState(14 * 60 + 23); // 14 minutes and 23 seconds in seconds
+  const [timeLeft, setTimeLeft] = useState(14 * 60 + 17); // 14 minutes and 17 seconds in seconds
 
   useEffect(() => {
     if (timeLeft <= 0) return;
