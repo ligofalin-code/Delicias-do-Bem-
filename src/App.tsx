@@ -104,11 +104,11 @@ const CountdownTimer = () => {
 
 const TestimonialCarousel = () => {
   const testimonials = [
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "fiz e ficou muito bom" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "nem parece sem açúcar" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "minha pele melhorou depois que comecei" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "achei que ia dar errado, mas deu super certo" },
-    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "fiz e ficou muito bom" }
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_01_i86wcw.webp", text: "minha pele melhorou muito" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_02_sel5kd.webp", text: "parei de ter espinhas direto" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_03_eiwmpu.webp", text: "nem parece sem açúcar" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_04_ckadg9.webp", text: "achei que não ia funcionar, mas funcionou mesmo" },
+    { src: "https://res.cloudinary.com/dyqfspsap/image/upload/v1774975343/Depoimento_05_peqzxa.webp", text: "minha pele melhorou muito" }
   ];
 
   const [current, setCurrent] = useState(0);
@@ -187,9 +187,9 @@ export default function App() {
       {/* Hero Section */}
       <section className="bg-vanilla px-4 pt-6 pb-8 md:pt-10 md:pb-12">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-strawberry">Se sua pele está piorando, o açúcar pode ser o motivo</p>
+          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-strawberry">Se sua pele está piorando, o açúcar é o motivo</p>
           <h1 className="mb-6 text-3xl font-bold leading-tight text-dark-chocolate md:text-6xl">
-            Você ama doce, mas o açúcar pode estar <span className="text-strawberry">destruindo sua pele, causando inchaço, acelerando o envelhecimento</span> e você nem percebe
+            Você ama doce, mas o açúcar está <span className="text-strawberry">destruindo sua pele, causando espinhas, ressecamento, rugas, acelerando o envelhecimento</span> e você nem percebe
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-text-main md:text-xl leading-relaxed">
             Você tenta evitar, mas sempre volta, porque <span className="font-bold text-chocolate">ninguém consegue viver sem comer o que gosta.</span>
@@ -209,10 +209,12 @@ export default function App() {
             <div className="italic text-text-main/70 space-y-1 mb-4">
               <p>‘Só hoje não tem problema…’</p>
               <p>‘Depois eu compenso…’</p>
-              <p>‘Será que isso está me fazendo mal?’</p>
+              <p>‘Será que isso está piorando minha pele?’</p>
             </div>
             <p className="text-xl font-bold text-strawberry">Você não é o problema.</p>
           </div>
+
+          <p className="mb-8 text-sm font-bold text-chocolate">Mais de milhares de pessoas já estão mudando isso sem parar de comer doce</p>
 
           <div className="mb-6 flex flex-col items-center gap-3 text-left md:flex-row md:justify-center md:gap-6">
             <div className="flex items-center gap-2 font-bold text-chocolate text-sm md:text-base">
@@ -239,7 +241,7 @@ export default function App() {
 
           <div className="mx-auto max-w-xs">
             <PulseButton onClick={scrollToOffer} className="py-4 text-lg uppercase">
-              Quero comer sem medo
+              QUERO COMER DOCE SEM PREJUDICAR MINHA PELE
             </PulseButton>
             <p className="mt-3 text-xs font-bold text-strawberry animate-pulse">Essa condição pode acabar hoje</p>
           </div>
@@ -254,20 +256,19 @@ export default function App() {
               <span className="text-strawberry">🚨 ISSO PODE ESTAR ACONTECENDO COM VOCÊ…</span> E VOCÊ NEM PERCEBE
             </h2>
             <div className="text-lg font-medium text-text-main/80 space-y-2">
-              <p>Você já acordou com o rosto inchado?</p>
-              <p>Já percebeu sua pele piorar depois de comer doce?</p>
-              <p>Ou sente que sua pele reage ao que você come?</p>
+              <p>Você já percebeu sua pele mudando, mas não sabia o motivo?</p>
+              <p>Talvez você esteja passando por isso:</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
             {[
-              { label: 'Acne', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/acne_ysx15x.webp' },
-              { label: 'Pele seca', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/Pele_seca_doxb5m.webp' },
-              { label: 'Rugas', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973427/rugas_uemzf4.webp' },
-              { label: 'Envelhecimento precoce', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/envelhecimento_precoce_fzde4h.webp' },
+              { label: 'Espinhas (acne) que aparecem sem explicação', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/acne_ysx15x.webp' },
+              { label: 'Pele seca, sem brilho e sem vida', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/Pele_seca_doxb5m.webp' },
+              { label: 'Rugas cada vez mais visíveis', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973427/rugas_uemzf4.webp' },
+              { label: 'Envelhecimento precoce da pele', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/envelhecimento_precoce_fzde4h.webp' },
               { label: 'Degradação do colágeno', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/degrada%C3%A7%C3%A3o_do_col%C3%A1geno_srbmhz.webp' },
-              { label: 'Flacidez', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/flacidez_hgltlj.webp' },
+              { label: 'Flacidez e perda de firmeza', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/flacidez_hgltlj.webp' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl shadow-md">
                 <img 
@@ -286,12 +287,12 @@ export default function App() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl bg-vanilla p-6 shadow-inner">
-              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O problema não é falta de força de vontade.</h3>
-              <p className="mb-4 text-text-main/80">O problema é que você foi levado a acreditar que precisa:</p>
+              <h3 className="mb-4 text-xl font-bold text-dark-chocolate">O problema não é falta de disciplina.</h3>
+              <p className="mb-4 text-text-main/80">O problema é que você foi levada a acreditar que precisa:</p>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 font-bold text-strawberry">
                   <XCircle size={20} />
-                  <span>Parar de comer o que gosta</span>
+                  <span>Parar de comer doce</span>
                 </li>
                 <li className="flex items-center gap-3 font-bold text-strawberry">
                   <XCircle size={20} />
@@ -306,18 +307,19 @@ export default function App() {
               <div className="mt-8 pt-6 border-t border-chocolate/10">
                 <p className="font-bold text-dark-chocolate mb-3">Mas a verdade é simples:</p>
                 <ul className="space-y-2 text-sm text-text-main/70">
-                  <li>Você não precisa parar de comer doce.</li>
+                  <li>Você não precisa parar de comer o que gosta.</li>
                   <li>Você só precisa aprender a fazer do jeito certo.</li>
                 </ul>
               </div>
             </div>
             <div className="flex flex-col justify-center text-center md:text-left">
               <h2 className="mb-4 text-2xl font-bold text-dark-chocolate leading-tight">
-                Foi aí que tudo mudou...
+                Foi aí que tudo mudou…
               </h2>
               <p className="mb-6 text-lg text-text-main/80">
-                Quando eu percebi que não precisava parar de comer doce, só precisava mudar a forma de preparar.
+                Quando eu percebi que não precisava abrir mão do doce, só precisava mudar a forma de preparar.
               </p>
+              <p className="mb-4 text-sm font-bold text-strawberry">E o pior, isso pode estar sendo causado pelo que você come todos os dias.</p>
               <PulseButton onClick={scrollToOffer} className="px-6 text-base uppercase">
                 QUERO APRENDER O JEITO CERTO
               </PulseButton>
@@ -329,6 +331,9 @@ export default function App() {
       {/* Steps Section */}
       <section className="bg-vanilla-dark px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl">
+          <h2 className="mb-8 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">
+            SÃO APENAS 3 PASSOS PARA TRANSFORMAR SUA PELE
+          </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {[
               { 
@@ -338,13 +343,13 @@ export default function App() {
               },
               { 
                 step: '2', 
-                title: 'Coma sem prejudicar sua pele e seu corpo', 
+                title: 'Coma sem prejudicar sua pele', 
                 desc: 'Receitas simples, rápidas e com sabor de verdade' 
               },
               { 
                 step: '3', 
-                title: 'Volte a se sentir bem com seu corpo', 
-                desc: 'Menos inchaço, mais leveza e mais confiança' 
+                title: 'Volte a se sentir bem com sua pele', 
+                desc: 'Menos acne, mais firmeza, mais confiança' 
               }
             ].map((item, i) => (
               <div key={i} className="relative rounded-3xl bg-white p-6 pt-10 shadow-md">
@@ -363,15 +368,15 @@ export default function App() {
       <section className="bg-white px-4 py-4 md:py-6">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-8 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">
-            Os benefícios que você começa a sentir na prática
+            POR QUE VOCÊ PRECISA DISSO AGORA?
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: <Utensils size={20} />, title: 'Comer sem culpa', desc: 'Saboreie o que você ama sem o peso na consciência.' },
-              { icon: <Heart size={20} />, title: 'Reduzir o inchaço', desc: 'Sinta a diferença imediata no seu corpo, com muito mais leveza.' },
-              { icon: <Zap size={20} />, title: 'Melhorar a aparência da pele', desc: 'Recupere o brilho e a saúde da sua pele.' },
-              { icon: <Star size={20} />, title: 'Ter mais energia', desc: 'Evite os picos de açúcar e tenha disposição constante.' },
-              { icon: <Clock size={20} />, title: 'Não depender de dietas restritivas', desc: 'Aprenda a comer bem de forma equilibrada e prazerosa.' }
+              { icon: <Utensils size={20} />, title: 'Comer doce sem culpa', desc: 'Saboreie o que você ama sem o peso na consciência.' },
+              { icon: <Heart size={20} />, title: 'Reduzir espinhas e oleosidade', desc: 'Sinta a diferença imediata na saúde da sua pele.' },
+              { icon: <Zap size={20} />, title: 'Melhorar a textura da pele', desc: 'Recupere o brilho e a saúde da sua pele.' },
+              { icon: <Star size={20} />, title: 'Reduzir sinais de envelhecimento', desc: 'Combata rugas e flacidez de dentro para fora.' },
+              { icon: <Clock size={20} />, title: 'Ter mais energia no dia a dia', desc: 'Evite os picos de açúcar e tenha disposição constante.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 rounded-2xl bg-vanilla/20 p-5 transition-all hover:bg-vanilla/40">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-caramel shadow-sm">
@@ -391,7 +396,7 @@ export default function App() {
       <section className="bg-vanilla px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-4 text-2xl font-bold text-dark-chocolate md:text-3xl">
-            📅 365 DIAS DE CARDÁPIOS PRONTOS PRA VOCÊ
+            O SEU GUIA COMPLETO PARA UMA PELE SAUDÁVEL E SEM CULPA
           </h2>
           <p className="mx-auto mb-6 max-w-2xl text-base text-text-main/80 leading-relaxed">
             Você não vai precisar pensar no que comer… <span className="font-bold text-caramel">já está tudo pronto pra você</span>.
@@ -401,7 +406,7 @@ export default function App() {
             {[
               { title: 'CAFÉ DA MANHÃ E LANCHES', text: 'Café da manhã gostoso e sem culpa', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/cafe_da_manha_yi2kxn.webp' },
               { title: 'ALMOÇO E JANTAR', text: 'Almoço e jantar com comida de verdade', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/almo%C3%A7o_e_jantar_svesw0.webp' },
-              { title: 'DOCES E SOBREMESAS', text: 'Sobremesas que parecem normais, mas não prejudicam seu corpo', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/doces_e_sobremesas_jchkov.webp' },
+              { title: 'DOCES E SOBREMESAS', text: 'Sobremesas que parecem normais, mas não prejudicam sua pele', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973423/doces_e_sobremesas_jchkov.webp' },
               { title: 'MOLHOS E PATÊS', text: 'Receitas simples que funcionam na prática', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973424/pates_lnbksg.webp' },
               { title: 'SOPAS E CREMES', text: 'Leves, cremosos e reconfortantes', src: 'https://res.cloudinary.com/dyqfspsap/image/upload/v1774973428/sopas_vw4jek.webp' }
             ].map((item, i) => (
@@ -457,13 +462,13 @@ export default function App() {
       {/* Target Audience Section */}
       <section className="bg-vanilla px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-6 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">As Delícias do Bem são para você se:</h2>
+          <h2 className="mb-6 text-center text-2xl font-bold text-dark-chocolate md:text-3xl">As Delícias do Bem são para você se você quer:</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { title: 'Pessoas com restrições alimentares', desc: 'Indivíduos que precisam evitar açúcar e glúten por questões de saúde, como diabetes e intolerâncias.' },
-              { title: 'Famílias saudáveis', desc: 'Pais que buscam oferecer uma alimentação nutritiva e saborosa para seus filhos, promovendo hábitos saudáveis desde cedo.' },
-              { title: 'Adeptos de estilos de vida saudáveis', desc: 'Pessoas que seguem dietas como low carb, paleo ou veganas e desejam receitas que se encaixem nessas abordagens.' },
-              { title: 'Busca de controle de peso', desc: 'Pessoas que desejam perder ou manter o peso, precisando de receitas que sejam satisfatórias, mas que ajudem a controlar as calorias.' }
+              { title: 'Acabar com as espinhas e a oleosidade', desc: 'Sua pele reflete o que você come. Aprenda a comer doce sem causar inflamações.' },
+              { title: 'Combater o envelhecimento precoce', desc: 'O açúcar degrada o colágeno. Nossas receitas ajudam a manter a firmeza e a elasticidade da pele.' },
+              { title: 'Reduzir rugas e flacidez', desc: 'Nutra sua pele de dentro para fora com ingredientes que realmente fazem bem.' },
+              { title: 'Comer doce sem culpa e sem medo', desc: 'Liberte-se da restrição e aproveite o sabor de verdade sem prejudicar sua saúde.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3 py-2">
                 <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-caramel/10 text-caramel">
@@ -534,11 +539,10 @@ export default function App() {
       {/* Offer Section */}
       <section id="oferta" className="bg-vanilla-dark px-4 py-4 md:py-6">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-center shadow-xl md:p-10 border border-gray-100">
-          <h2 className="mb-4 text-2xl font-bold text-strawberry md:text-4xl">OFERTA POR TEMPO LIMITADO!</h2>
+          <h2 className="mb-4 text-2xl font-bold text-strawberry md:text-4xl uppercase">Hoje você não precisa abrir mão do que gosta</h2>
           
           <p className="mb-8 text-xl font-bold text-dark-chocolate">
-            Hoje você não precisa abrir mão do que gosta <br/>
-            <span className="text-price">Por um valor simbólico, você tem acesso a tudo isso</span>
+            Por um valor simbólico, você tem acesso a tudo isso
           </p>
 
           <div className="mb-4 flex flex-col items-center gap-6 md:flex-row">
@@ -585,7 +589,7 @@ export default function App() {
 
           <div className="mx-auto max-w-xs">
             <div className="mb-4 text-sm font-bold text-text-main space-y-2">
-              <p>Se você sair dessa página, vai continuar comendo da mesma forma</p>
+              <p>Se você sair dessa página, vai continuar comendo da mesma forma…</p>
               <p>E isso continua afetando sua pele todos os dias.</p>
             </div>
             <PulseButton 
@@ -611,9 +615,9 @@ export default function App() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Comer pouco e passar fome",
-                  "Seguir dietas complicadas e caras",
-                  "Deixar de comer o que você gosta"
+                  "Parar de comer doce e viver com desejo",
+                  "Gastar rios de dinheiro com cremes caros",
+                  "Fazer dietas que você não consegue manter"
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-strawberry/10">
@@ -633,9 +637,9 @@ export default function App() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Comer comida de verdade e saborosa",
-                  "Receitas simples, práticas e rápidas",
-                  "Alimentação sem açúcar e sem glúten"
+                  "Comer doce sem prejudicar sua pele",
+                  "Combater o envelhecimento de dentro para fora",
+                  "Ter prazer ao comer e ver sua pele melhorar"
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cta/10">
